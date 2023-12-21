@@ -1,0 +1,300 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar {
+    display: flex;
+    /* Changed from inline to flex */
+    justify-content: space-between;
+    /* Added to create space between logo and menu */
+    align-items: center;
+    /* Added for vertical alignment */
+    background-color: cadetblue;
+    padding: 10px;
+    /* Added padding for better appearance */
+    border-radius: 3px;
+}
+
+.logo img {
+    float: left;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.menu {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    /* Changed from float to inline */
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.middle-container {
+    display: flex;
+}
+
+.content_box,
+.image1 {
+    width: 50%;
+    box-sizing: border-box;
+    /* Ensures padding and borders don't affect width */
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.image1 img {
+    width: 100%;
+}
+
+.content_box {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content_box_header {
+    font-size: 15px;
+    background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    height: 50%;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.online_deal {
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+}
+
+.content_box_text {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.pop-outin {
+    animation: 2s anim-popoutin ease infinite;
+}
+
+@keyframes anim-popoutin {
+    0% {
+        color: black;
+        transform: scale(0);
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+        color: red;
+        transform: scale(2);
+        opacity: 1;
+        text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        color: black;
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        /* animate nothing to add pause at the end of animation */
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.key_deal {
+    font-size: 80px;
+    padding: 5px;
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    font-family: bungee, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: calc(2rem + 5vw);
+    text-align: center;
+    margin: 0;
+    color: var(--color-primary);
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #b32a18;
+    --color-secondary: #94291b;
+    --color-tertiary: #cf3b27;
+    --color-quaternary: #df3923;
+    --color-quinary: #ee5440;
+    /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
+@keyframes shadows {
+    0% {
+        text-shadow: none;
+    }
+    10% {
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+    }
+    30% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    40% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    }
+    50% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    }
+    60% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    }
+    70% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    80% {
+        text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+    }
+    90% {
+        text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    40% {
+        transform: translate(-12px, -12px);
+    }
+    50% {
+        transform: translate(-12px, -12px);
+    }
+    60% {
+        transform: translate(-12px, -12px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/* Optional: Add more styling for better layout */
+
+.content_box {
+    background-color: #ece0e0;
+}
+
+.image1 {
+    background-color: #eaeaea;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .middle-container {
+        flex-direction: column;
+    }
+    .content_box,
+    .image1 {
+        width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Added to create space between logo and menu */
+    /* align-items: center; Added for vertical alignment */
+    background-color: rgb(14, 23, 24);
+    padding: 10px 10px 0px;
+    /* Added padding for better appearance */
+    border-radius: 3px;
+    color: rgb(214, 227, 241);
+}
+
+.content {
+    justify-content: space-between;
+    /* Added to create space between logo and menu */
+    padding: 10px;
+    /* Added padding for better appearance */
+}
+
+.content li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.content a:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer-banner {
+    text-align: center;
+    background-color: cadetblue;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
