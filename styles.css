@@ -5,6 +5,7 @@
     margin: 0px;
 }
 
+
 /*navbar*/
 
 .navbar {
@@ -262,20 +263,165 @@ a {
 }
 
 
+/*Feature Container*/
+
 .feature-container {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-    padding: 20px;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    flex-wrap: wrap;
+    /* Allow items to wrap if needed */
+    padding: 30px;
     margin: auto;
 }
 
-.feature1, .feature2, .feature3 {
-    width: 33.3%; /* Each feature takes full width of the container */
-    text-align: center; /* Center text within each feature */
+.feature1,
+.feature2,
+.feature3 {
+    width: 30%;
+    /* Each feature takes full width of the container */
+    text-align: center;
+    /* Center text within each feature */
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    box-sizing: border-box;
+    background-color: cadetblue;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.feature1:hover,
+.feature2:hover,
+.feature3:hover {
+    color: white;
+}
+
+.feature1:hover p,
+.feature2:hover p,
+.feature3:hover p {
+    color: black;
+}
+
+.feature1 p,
+.feature2 p,
+.feature3 p {
+    color: rgb(255, 255, 255);
+}
+
+
+/*Products_Container*/
+
+.products_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+.products_banner h1 {
+    padding: 20px;
+    position: relative;
+    color: hsl(0, 87%, 25%);
+    font-weight: bolder;
+    font-family: "Anonymous Pro", monospace;
+    letter-spacing: 7px;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 87%, 25%);
+    white-space: nowrap;
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 710px;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.products {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.product1,
+.product2,
+.product3 {
+    width: 30%;
+    /* Each feature takes full width of the container */
+    text-align: center;
+    /* Center text within each feature */
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    box-sizing: border-box;
+    background-color: rgb(165, 208, 233);
+    border-radius: 5px;
+    color: rgb(104, 8, 8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3px;
+    background-color: #eaeaea;
+    padding: 5px;
+    margin: 10px;
+}
+
+.products ol {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.products ol li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.products ol li::before {
+    content: '\2713';
+    /* Unicode character for checkmark */
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: #28a745;
+    /* Set color for the checkmark */
+}
+
+.products h2 {
+    background-color: #007bff;
+    /* Set background color for the h2 element */
+    color: #fff;
+    /* Set text color for the h2 element */
     padding: 10px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    font-size: 1.2rem;
+    margin: 0;
+    border-radius: 5px;
 }
 
 
