@@ -1,7 +1,11 @@
+/* Default body */
+
 * {
     padding: 0px;
     margin: 0px;
 }
+
+/*navbar*/
 
 .navbar {
     display: flex;
@@ -44,6 +48,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
+
+/*Middle Body*/
 
 .middle-container {
     display: flex;
@@ -253,6 +260,26 @@ a {
         width: 100%;
     }
 }
+
+
+.feature-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    padding: 20px;
+    margin: auto;
+}
+
+.feature1, .feature2, .feature3 {
+    width: 33.3%; /* Each feature takes full width of the container */
+    text-align: center; /* Center text within each feature */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+/*Footer*/
 
 .footer {
     display: flex;
