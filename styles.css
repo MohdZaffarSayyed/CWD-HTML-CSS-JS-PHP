@@ -51,6 +51,20 @@ a {
 }
 
 
+@media screen and (max-width:550px){
+  
+    .navbar{
+        flex-direction: column;
+    }
+    .menu li{
+        display: block;
+    }
+
+    .logo, .menu{
+        width: 100%;
+    }
+}
+
 /*Middle Body*/
 
 .middle-container {
@@ -313,6 +327,16 @@ a {
     color: rgb(255, 255, 255);
 }
 
+@media screen and (max-width:930px){
+  
+    .feature-container{
+        flex-direction: column;
+    }
+
+    .feature1, .feature2, .feature3{
+        width: 100%;
+    }
+}
 
 /*Products_Container*/
 
@@ -424,31 +448,42 @@ a {
     border-radius: 5px;
 }
 
+.products :hover{
+    box-shadow: 0 4px 8px 0 rgba(47, 10, 95, 0.2), 0 6px 20px 0 rgba(25, 12, 61, 0.19);
+}
 
-/*Footer*/
+@media screen and (max-width:970px){
+  
+    .products{
+        flex-direction: column;
+    }
+    .product1, .product2, .product3{
+        width: 100%;
+    }
+    .products_banner h1{
+        font-size: 20px;
+    }
+}
 
+/* Footer Styles */
 .footer {
     display: flex;
     flex-direction: column;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    /* Added to create space between logo and menu */
-    /* align-items: center; Added for vertical alignment */
     background-color: rgb(14, 23, 24);
-    padding: 10px 10px 0px;
-    /* Added padding for better appearance */
+    padding: 20px; /* Adjusted for better appearance */
     border-radius: 3px;
     color: rgb(214, 227, 241);
 }
 
-.content {
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    /* Added to create space between logo and menu */
+    gap: 20px;
+}
+
+.content {
     padding: 10px;
-    /* Added padding for better appearance */
 }
 
 .content li a {
@@ -457,6 +492,8 @@ a {
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
 }
 
 .content a:hover {
@@ -470,4 +507,24 @@ a {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center; /* Align items in the center */
+    }
+    .Domain-and-hosting, .Business-Emails, .Dedicated-VPS, .Managed-Services, .CWD {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center; /* Align text center for smaller screens */
+    }
+    .Domain-and-hosting h2, .Business-Emails h2, .Dedicated-VPS h2, .Managed-Services h2, .CWD h2 {
+        text-align: center; /* Align h2 center */
+    }
+    .content {
+        padding: 10px;
+        text-align: center; /* Align content center */
+    }
 }
