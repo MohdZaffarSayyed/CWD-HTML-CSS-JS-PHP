@@ -184,11 +184,11 @@ a {
 }
 
 :root {
-    --color-primary: #b32a18;
-    --color-secondary: #94291b;
-    --color-tertiary: #cf3b27;
-    --color-quaternary: #df3923;
-    --color-quinary: #ee5440;
+    --color-primary: #050213;
+    --color-secondary: #0c0533;
+    --color-tertiary: #0f0769;
+    --color-quaternary: #3c1a69;
+    --color-quinary: #3e377a;
     /*
   --color-primary: #5192ED;
   --color-secondary: #69A1F0;
