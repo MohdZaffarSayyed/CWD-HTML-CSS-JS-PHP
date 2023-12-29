@@ -547,3 +547,66 @@ a {
 .socialmedia i:hover {
     color: white; /* Color change on hover */
 }
+
+/* Existing styles for the menu and sub-menu */
+/* ... */
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white; /* Adjust submenu background color */
+    padding: 10px;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li:hover .submenu {
+    display: block; /* Show submenu on hover */
+}
+
+.submenu > li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.submenu a {
+    display: block;
+    color: black; /* Adjust submenu item color */
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    color: cadetblue; /* Change color on hover */
+}
+
+.sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position the sub-submenu to the right of the parent submenu */
+    background-color: white; /* Adjust sub-submenu background color */
+    padding: 10px;
+}
+
+.submenu li:hover > .sub-submenu {
+    display: block; /* Show sub-submenu on hover */
+}
+
+.sub-submenu > li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.sub-submenu a {
+    display: block;
+    color: black; /* Adjust sub-submenu item color */
+    text-decoration: none;
+}
+
+.sub-submenu a:hover {
+    color: cadetblue; /* Change color on hover */
+}
