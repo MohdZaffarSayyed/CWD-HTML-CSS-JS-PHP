@@ -50,20 +50,117 @@ a {
     color: black;
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    /* Adjust submenu background color */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
 
-@media screen and (max-width:550px){
-  
-    .navbar{
+.menu>li {
+    position: relative;
+}
+
+.menu>li:hover .submenu {
+    display: block;
+    /* Show submenu on hover */
+    transition: 0.5s;
+}
+
+.submenu>li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.submenu a {
+    display: block;
+    color: black;
+    /* Adjust submenu item color */
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    color: white;
+    /* Change color on hover */
+}
+
+.sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Position the sub-submenu to the right of the parent submenu */
+    background-color: cadetblue;
+    /* Adjust sub-submenu background color */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.submenu li:hover>.sub-submenu {
+    display: block;
+    margin-left: 130px;
+    /* Show sub-submenu on hover */
+    transition: 0.5s;
+}
+
+.sub-submenu>li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.sub-submenu a {
+    display: block;
+    color: black;
+    /* Adjust sub-submenu item color */
+    text-decoration: none;
+}
+
+.sub-submenu a:hover {
+    color: white;
+    /* Change color on hover */
+}
+
+@media screen and (max-width:935px) {
+    .navbar {
         flex-direction: column;
+        align-items: flex-start;
     }
-    .menu li{
+    .menu li {
         display: block;
     }
-
-    .logo, .menu{
+    .logo,
+    .menu {
         width: 100%;
     }
+    .menu.active {
+        display: block;
+        /* Show the menu when active on mobile */
+    }
+    .menu-toggle {
+        display: block;
+        /* Show the menu toggle button */
+        cursor: pointer;
+    }
+    .submenu,
+    .sub-submenu {
+        display: none;
+        /* Hide submenus by default on mobile */
+        position: static;
+        /* Reset position */
+    }
+    .submenu.active,
+    .sub-submenu.active {
+        display: block;
+        /* Show submenus when active on mobile */
+    }
 }
+
 
 /*Middle Body*/
 
@@ -266,7 +363,7 @@ a {
 
 /* Responsive adjustments */
 
-@media (max-width: 768px) {
+@media (max-width: 935px) {
     .middle-container {
         flex-direction: column;
     }
@@ -327,16 +424,17 @@ a {
     color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width:930px){
-  
-    .feature-container{
+@media screen and (max-width:930px) {
+    .feature-container {
         flex-direction: column;
     }
-
-    .feature1, .feature2, .feature3{
+    .feature1,
+    .feature2,
+    .feature3 {
         width: 100%;
     }
 }
+
 
 /*Products_Container*/
 
@@ -448,29 +546,33 @@ a {
     border-radius: 5px;
 }
 
-.products :hover{
+.products :hover {
     box-shadow: 0 4px 8px 0 rgba(47, 10, 95, 0.2), 0 6px 20px 0 rgba(25, 12, 61, 0.19);
 }
 
-@media screen and (max-width:970px){
-  
-    .products{
+@media screen and (max-width:970px) {
+    .products {
         flex-direction: column;
     }
-    .product1, .product2, .product3{
+    .product1,
+    .product2,
+    .product3 {
         width: 100%;
     }
-    .products_banner h1{
+    .products_banner h1 {
         font-size: 20px;
     }
 }
 
+
 /* Footer Styles */
+
 .footer {
     display: flex;
     flex-direction: column;
     background-color: rgb(14, 23, 24);
-    padding: 20px; /* Adjusted for better appearance */
+    padding: 20px;
+    /* Adjusted for better appearance */
     border-radius: 3px 3px 0px 0px;
     color: rgb(214, 227, 241);
 }
@@ -501,112 +603,68 @@ a {
     color: black;
 }
 
+
 /* Media Queries */
+
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
-        align-items: center; /* Align items in the center */
+        align-items: center;
+        /* Align items in the center */
     }
-    .Domain-and-hosting, .Business-Emails, .Dedicated-VPS, .Managed-Services, .CWD {
+    .Domain-and-hosting,
+    .Business-Emails,
+    .Dedicated-VPS,
+    .Managed-Services,
+    .CWD {
         width: 100%;
         margin-bottom: 20px;
-        text-align: center; /* Align text center for smaller screens */
+        text-align: center;
+        /* Align text center for smaller screens */
     }
-    .Domain-and-hosting h2, .Business-Emails h2, .Dedicated-VPS h2, .Managed-Services h2, .CWD h2 {
-        text-align: center; /* Align h2 center */
+    .Domain-and-hosting h2,
+    .Business-Emails h2,
+    .Dedicated-VPS h2,
+    .Managed-Services h2,
+    .CWD h2 {
+        text-align: center;
+        /* Align h2 center */
     }
     .content {
         padding: 10px;
-        text-align: center; /* Align content center */
+        text-align: center;
+        /* Align content center */
     }
 }
 
 .footer-banner {
     display: flex;
-    background-color:cadetblue;
+    background-color: cadetblue;
     color: black;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     padding: 10px;
     margin: 10px;
 }
 
-.footer-banner p{
-    flex: 1; /* Take up remaining space */
+.footer-banner p {
+    flex: 1;
+    /* Take up remaining space */
 }
-.socialmedia{
+
+.socialmedia {
     display: flex;
-    gap: 10px; /* Adjust the gap between social icons */
+    gap: 10px;
+    /* Adjust the gap between social icons */
     padding-right: 10px;
 }
-.socialmedia i{
+
+.socialmedia i {
     padding-right: 10px;
     font-size: 20px;
 }
 
 .socialmedia i:hover {
-    color: white; /* Color change on hover */
-}
-
-/* Existing styles for the menu and sub-menu */
-/* ... */
-
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: white; /* Adjust submenu background color */
-    padding: 10px;
-}
-
-.menu > li {
-    position: relative;
-}
-
-.menu > li:hover .submenu {
-    display: block; /* Show submenu on hover */
-}
-
-.submenu > li {
-    clear: both;
-    width: 100%;
-    position: relative;
-}
-
-.submenu a {
-    display: block;
-    color: black; /* Adjust submenu item color */
-    text-decoration: none;
-}
-
-.submenu a:hover {
-    color: cadetblue; /* Change color on hover */
-}
-
-.sub-submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%; /* Position the sub-submenu to the right of the parent submenu */
-    background-color: white; /* Adjust sub-submenu background color */
-    padding: 10px;
-}
-
-.submenu li:hover > .sub-submenu {
-    display: block; /* Show sub-submenu on hover */
-}
-
-.sub-submenu > li {
-    clear: both;
-    width: 100%;
-    position: relative;
-}
-
-.sub-submenu a {
-    display: block;
-    color: black; /* Adjust sub-submenu item color */
-    text-decoration: none;
-}
-
-.sub-submenu a:hover {
-    color: cadetblue; /* Change color on hover */
+    color: white;
+    /* Color change on hover */
 }
