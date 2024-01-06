@@ -3,32 +3,19 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a2b47f8e99.js" crossorigin="anonymous"></script>
-    <title>
-        CheckWithDeveloper
-    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="contact_styles.css">
+    <title>Contact Admin | CheckWithDeveloper </title>
 </head>
 
 <body>
 
-    <!-- <div class="header">
-        <div class="navbar" style="background-color: cadetblue;">
-            <div class="logo">
-                <a class="cwd_logo" href="#home"><img src="./Images/cwdLogo.png" alt="logo_CWD"></a>
-            </div>
-            <ul class="menu">
-                <li><a href="#news">Services</a></li>
-                <li><a href="#contact">About</a></li>
-                <li><a href="#about">Contact</a></li>
-                <li><a href="#about">Updates</a></li>
-            </ul>
-        </div>
-    </div> -->
     <div class="header">
         <div class="navbar" style="background-color: cadetblue;">
             <div class="logo">
-                <a class="cwd_logo" href="./index.html"><img src="./Images/cwdLogo.png" alt="logo_CWD"></a>
+                <a class="cwd_logo" href="#home"><img src="./Images/cwdLogo.png" alt="logo_CWD"></a>
             </div>
             <ul class="menu">
                 <li>
@@ -83,87 +70,68 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="./contact.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#contact">About</a></li>
+                <li><a href="#about">Contact</a></li>
                 <li><a href="#about">Updates</a></li>
             </ul>
         </div>
     </div>
 
 
-    <div class="middle-container">
-        <div class="content_box">
-            <div class="content_box_header">
-                <h1>Make Business <span class="online_deal">Online </span> <br>With <span class="online_deal">biggest Deal's</span> of all time</h1>
+    <div class="contact-container">
+        <div class="contact-inner-container">
+      
+          <div class="contact-info-container">
+            <h1 class="contact-heading">Welcome Team!</h1>
+            <p class="contact-description">
+              Please reach out to us for all your IT needs, you will surely find absolute solutions.!!
+            </p>
+            <div class="line"></div>
+      
+            <div class="contact-details">
+              <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+              <p>Sakinaka, Mumbai-400072</p>
             </div>
-            <div class="content_box_text">
-                <h2 class="pop-outin">Web Hosting Plans Starting with just</h2>
-                <h2><i class="fa-solid fa-indian-rupee-sign"></i> <span class="key_deal">999/</span>year</h2>
+            <hr />
+      
+            <div class="contact-details">
+              <h3><i class="fa fa-envelope"></i> Email</h3>
+              <p>admin@checkwithdeveloper.com</p>
             </div>
-        </div>
-        <div class="image1">
-            <img src="./Images/banner.png" alt="">
-        </div>
-    </div>
-
-    <div class="feature-container">
-        <div class="feature1">
-            <h1><i class="fa-solid fa-business-time"></i> Professional Team</h1>
-            <p>Get your solutions with ease from the experts</p>
-        </div>
-        <div class="feature2">
-            <h1><i class="fa-solid fa-shuffle"></i> Quick Free Migration</h1>
-            <p>Rest hustle free, we will migrate your services </p>
-        </div>
-        <div class="feature3">
-            <h1><i class="fa-solid fa-money-bill"></i> Pocket Friendly</h1>
-            <p>Pay what it should cost </p>
-        </div>
-    </div>
-
-    <div class="products_container">
-        <div class="products_banner">
-            <h1>Super Web Hosting Deals.. </h1>
-        </div>
-        <div class="products">
-            <div class="product1">
-                <h1><i class="fa-solid fa-server"></i> Mini Plan</h1>
-                <ol>
-                    <li>Upto 500mb space</li>
-                    <li>1 website</li>
-                    <li>Fast SSD server</li>
-                    <li>2GB Bandwidth</li>
-                    <li>Managed Support</li>
-                    <li>Free Deployment</li>
-                </ol>
-                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 999/year</h2>
+            <hr />
+      
+            <div class="contact-details">
+              <h3><i class="fa fa-phone"></i> Lets Talk</h3>
+              <p>+91 9920162689</p>
             </div>
-            <div class="product1">
-                <h1><i class="fa-solid fa-cloud"></i> VPS/Cloud Flexible</h1>
-                <ol>
-                    <li>500GB SSD storage</li>
-                    <li>Unlimited Website</li>
-                    <li>Unmetered Bandwidth</li>
-                    <li>Fast SSD server</li>
-                    <li>Root Access</li>
-                    <li>Managed Support</li>
-                </ol>
-                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 5000/month</h2>
-            </div>
-            <div class="product1">
-                <h1><i class="fa-solid fa-server"></i> Dedicated</h1>
-                <ol>
-                    <li>2TB SSD storage</li>
-                    <li>Unlimited Website</li>
-                    <li>Unmetered Bandwidth</li>
-                    <li>Fast SSD server</li>
-                    <li>Root Access</li>
-                    <li>Managed Support</li>
-                </ol>
-                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 10000/month</h2>
-            </div>
+            <hr />
+          </div>
+      
+          <div class="contact-form">
+            <form class="form" action="process_form.php" method="post" onsubmit="return validateForm()">
+              <div class="form-group">
+                <input type="text" name="name" id="name" class="input-field form-input" placeholder="Name" >
+              </div>
+              <div class="form-group">
+                <input type="text" name="email_address" id="email_address" class="input-field form-input" placeholder="Email" >
+                <span id="email-error" class="error"></span>
+              </div>
+              <div class="form-group">
+                  <input type="text" name="phone_no" id="phone_no" class="input-field form-input" placeholder="phone" >
+                  <span id="phone-error" class="error"></span>
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" rows="5" class="input-field form-input" placeholder="Message"></textarea>
+                <span id="message-error" class="error"></span>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="input-field submit-btn" value="Submit" >
+              </div>
+            </form>
+          </div>
+      
         </div>
-    </div>
+      </div>
 
     <div class="footer">
         <div class="footer-content">
