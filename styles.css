@@ -281,11 +281,11 @@ a {
 }
 
 :root {
-    --color-primary: #140e30;
-    --color-secondary: #2a234d;
-    --color-tertiary: #0f0769;
-    --color-quaternary: #3a2752;
-    --color-quinary: #565188;
+    --color-primary: rgba(29, 18, 78, 0);
+    --color-secondary: #38344d;
+    --color-tertiary: #524e7c;
+    --color-quaternary: #7469b3;
+    --color-quinary: #8989f3;
     /*
   --color-primary: #5192ED;
   --color-secondary: #69A1F0;
@@ -363,7 +363,7 @@ a {
 
 /* Responsive adjustments */
 
-@media (max-width: 935px) {
+@media screen and (max-width: 935px) {
     .middle-container {
         flex-direction: column;
     }
@@ -427,6 +427,8 @@ a {
 @media screen and (max-width:930px) {
     .feature-container {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .feature1,
     .feature2,
@@ -452,12 +454,12 @@ a {
 
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 .products_banner h1 {
-    padding: 20px;
+    padding: 10px;
     position: relative;
     color: hsl(0, 87%, 25%);
     font-weight: bolder;
     font-family: "Anonymous Pro", monospace;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
     overflow: hidden;
     border-right: 2px solid hsl(0, 87%, 25%);
     white-space: nowrap;
@@ -469,7 +471,7 @@ a {
         width: 0;
     }
     to {
-        width: 710px;
+        width: 100%;
     }
 }
 
@@ -491,7 +493,7 @@ a {
 .product1,
 .product2,
 .product3 {
-    width: 30%;
+    width: 33%;
     /* Each feature takes full width of the container */
     text-align: center;
     /* Center text within each feature */
@@ -560,8 +562,11 @@ a {
         width: 100%;
     }
     .products_banner h1 {
-        font-size: 20px;
+        font-size: 15px;
+        width: 100%;
+        align-items: center;
     }
+    
 }
 
 
@@ -606,7 +611,7 @@ a {
 
 /* Media Queries */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 935px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -668,3 +673,5 @@ a {
     color: white;
     /* Color change on hover */
 }
+
+
