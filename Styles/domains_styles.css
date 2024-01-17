@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+/* Default body */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*navbar*/
+
+.navbar {
+    display: flex;
+    /* Changed from inline to flex */
+    justify-content: space-between;
+    /* Added to create space between logo and menu */
+    align-items: center;
+    /* Added for vertical alignment */
+    background-color: cadetblue;
+    padding: 10px;
+    /* Added padding for better appearance */
+    border-radius: 3px;
+}
+
+.logo img {
+    float: left;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.menu {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    /* Changed from float to inline */
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    /* Adjust submenu background color */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.menu>li {
+    position: relative;
+}
+
+.menu>li:hover .submenu {
+    display: block;
+    /* Show submenu on hover */
+    transition: 0.5s;
+}
+
+.submenu>li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.submenu a {
+    display: block;
+    color: black;
+    /* Adjust submenu item color */
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    color: white;
+    /* Change color on hover */
+}
+
+.sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Position the sub-submenu to the right of the parent submenu */
+    background-color: cadetblue;
+    /* Adjust sub-submenu background color */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.submenu li:hover>.sub-submenu {
+    display: block;
+    margin-left: 130px;
+    /* Show sub-submenu on hover */
+    transition: 0.5s;
+}
+
+.sub-submenu>li {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+.sub-submenu a {
+    display: block;
+    color: black;
+    /* Adjust sub-submenu item color */
+    text-decoration: none;
+}
+
+.sub-submenu a:hover {
+    color: white;
+    /* Change color on hover */
+}
+
+@media screen and (max-width:935px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu li {
+        display: block;
+    }
+    .logo,
+    .menu {
+        width: 100%;
+    }
+    .menu.active {
+        display: block;
+        /* Show the menu when active on mobile */
+    }
+    .menu-toggle {
+        display: block;
+        /* Show the menu toggle button */
+        cursor: pointer;
+    }
+    .submenu,
+    .sub-submenu {
+        display: none;
+        /* Hide submenus by default on mobile */
+        position: static;
+        /* Reset position */
+    }
+    .submenu.active,
+    .sub-submenu.active {
+        display: block;
+        /* Show submenus when active on mobile */
+    }
+}
+
+
+/*Middle Body*/
+
+.middle-container {
+    display: flex;
+}
+
+.content_box,
+.image1 {
+    width: 50%;
+    box-sizing: border-box;
+    /* Ensures padding and borders don't affect width */
+    padding: 20px;
+    /* Adjust padding as needed */
+}
+
+.image1 img {
+    width: 100%;
+}
+
+.content_box {
+ 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:  #151719;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 55px;
+  }
+  .waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+
+  @media screen and (max-width: 750px) {
+    .middle-container {
+        flex-direction: column;
+    }
+    .content_box,
+    .image1 {
+        width: 100%;
+    }
+    .content_box{
+        height: 500px;
+    }
+    .waviy{
+        font-size: 50px;
+    }
+}
+
+.why-domain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px; /* Adjust as needed */
+    margin: 30px;
+}
+
+.why-domain-header{
+    width: 40%;
+}
+
+.why-domain-answer{
+    width: 60%;
+}
+
+.why-domain-header h1, .why-domain-answer p {
+    text-align: center;
+    margin: 0;
+}
+
+.why-domain-header h1 {
+    color: rgb(55, 62, 63); /* Example text color */
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.why-domain-answer p {
+    color: #1e183f; /* Example text color */
+    font-size: 20px;
+}
+
+#container {
+    margin: auto;
+    width: 100vw;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-display: swap; 
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+    text-align: center;
+    user-select: none;
+}
+
+#tfheader{
+    background-color:#c3dfef;
+}
+#tfnewsearch{
+    float:right;
+    padding:20px;
+}
+.tftextinput{
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    border:1px solid #0076a3; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+}
+.tfbutton {
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #0076a3; border-right:0px;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+.tfbutton:hover {
+    text-decoration: none;
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+  border: 0;
+}
+.tfclear{
+    clear:both;
+}
+/* Footer Styles */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 23, 24);
+    padding: 20px;
+    /* Adjusted for better appearance */
+    border-radius: 3px 3px 0px 0px;
+    color: rgb(214, 227, 241);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.content a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 935px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        /* Align items in the center */
+    }
+    .Domain-and-hosting,
+    .Business-Emails,
+    .Dedicated-VPS,
+    .Managed-Services,
+    .CWD {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        /* Align text center for smaller screens */
+    }
+    .Domain-and-hosting h2,
+    .Business-Emails h2,
+    .Dedicated-VPS h2,
+    .Managed-Services h2,
+    .CWD h2 {
+        text-align: center;
+        /* Align h2 center */
+    }
+    .content {
+        padding: 10px;
+        text-align: center;
+        /* Align content center */
+    }
+}
+
+.footer-banner {
+    display: flex;
+    background-color: cadetblue;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.footer-banner p {
+    flex: 1;
+    /* Take up remaining space */
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    /* Adjust the gap between social icons */
+    padding-right: 10px;
+}
+
+.socialmedia i {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.socialmedia i:hover {
+    color: white;
+    /* Color change on hover */
+}
+
+

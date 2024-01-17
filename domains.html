@@ -3,8 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/aboutus_styles.css">
-    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="./Styles/domains_styles.css">
     <script src="https://kit.fontawesome.com/a2b47f8e99.js" crossorigin="anonymous"></script>
     <title>
         CheckWithDeveloper
@@ -91,43 +90,59 @@
         </div>
     </div>
 
-    <div class="we-are-block">
-        <div id="about-us-section">   
-          <div class="about-us-image">
-                <img src="./Images/hosting.jpg" alt="What We Do">     
-          </div>      
-          <div class="about-us-info">      
-            <h2>Complete Web Solutions</h2>
-      
-            <p>We provide perfectly crafted web hosting and web design solutions for our lovely clients, comprising of small businesses, professionals, and individuals</p>
-      
-            <a href="#who-section" title="About Us Button" style="place-items: flex-end;">Who we are?</a>
-      
-          </div>
-      
+
+    <div class="middle-container">
+        <div class="content_box">
+            <div class="waviy">
+                <span style="--i:1">D</span>
+                <span style="--i:2">O</span>
+                <span style="--i:3">M</span>
+                <span style="--i:4">A</span>
+                <span style="--i:5">I</span>
+                <span style="--i:6">N</span>
+                <br>
+                <span style="--i:7">N</span>
+                <span style="--i:8">A</span>
+                <span style="--i:9">M</span>
+                <span style="--i:10">E</span>  
+               </div>
         </div>
-      
-        <div id="who-section">
-      
-          <div class="who-image">
-      
-            <img src="./Images/whoweare.jpg" alt="Who We Are">
-      
-          </div>
-      
-          <div class="who-info">
-      
-            <h2>Who we are?</h2>
-      
-            <p>Expert and experienced team members with highly professional skills. We are group of individual with expertise in the tasks we do. Give a try to compare the service!  </p>
-      
-            <a href="#about-us-section" title="who Button">What we do?</a>
-      
-          </div>
-      
+        <div class="image1">
+            <img src="./Images/domain.jpg" alt="Domain Name">
         </div>
-      
-      </div>
+    </div>
+
+    <div class="why-domain">
+        <div class="why-domain-header">
+            <h1>What Is Domain Name</h1>
+        </div>
+        <div class="why-domain-answer">
+            <p>a domain name is the unique address of your website on the internet. It's what people type into their browsers to find and visit your site. For example, in the domain name www.checkwithdeveloper.com, "checkwithdeveloper.com" is the domain name. It serves as a human-readable way to locate and access a specific website on the vast network of the internet.</p>
+        </div>     
+    </div>
+
+    <div id="container">
+        <span id="text1"></span>
+        <span id="text2"></span>
+    </div>
+    
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
 
     <div class="footer">
         <div class="footer-content">
@@ -190,6 +205,95 @@
         </div>
 
     </div>
+
+    <script type="text/javascript">
+        const elts = {
+                         text1: document.getElementById("text1"),
+                         text2: document.getElementById("text2")
+                     };
+ 
+                     const texts = [
+                         ".com",
+                         ".in",
+                         ".net",
+                         ".co.in",
+                         ".org",
+                         ".online",
+                         ".co",
+                         ".biz",
+                         ".info"
+                     ];
+ 
+                     const morphTime = 1;
+                     const cooldownTime = 0.25;
+ 
+                     let textIndex = texts.length - 1;
+                     let time = new Date();
+                     let morph = 0;
+                     let cooldown = cooldownTime;
+ 
+                     elts.text1.textContent = texts[textIndex % texts.length];
+                     elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+ 
+                     function doMorph() {
+                         morph -= cooldown;
+                         cooldown = 0;
+ 
+                         let fraction = morph / morphTime;
+ 
+                         if (fraction > 1) {
+                             cooldown = cooldownTime;
+                             fraction = 1;
+                         }
+ 
+                         setMorph(fraction);
+                     }
+ 
+                     function setMorph(fraction) {
+                         elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                         elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+ 
+                         fraction = 1 - fraction;
+                         elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                         elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+ 
+                         elts.text1.textContent = texts[textIndex % texts.length];
+                         elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+                     }
+ 
+                     function doCooldown() {
+                         morph = 0;
+ 
+                         elts.text2.style.filter = "";
+                         elts.text2.style.opacity = "100%";
+ 
+                         elts.text1.style.filter = "";
+                         elts.text1.style.opacity = "0%";
+                     }
+ 
+                     function animate() {
+                         requestAnimationFrame(animate);
+ 
+                         let newTime = new Date();
+                         let shouldIncrementIndex = cooldown > 0;
+                         let dt = (newTime - time) / 1000;
+                         time = newTime;
+ 
+                         cooldown -= dt;
+ 
+                         if (cooldown <= 0) {
+                             if (shouldIncrementIndex) {
+                                 textIndex++;
+                             }
+ 
+                             doMorph();
+                         } else {
+                             doCooldown();
+                         }
+                     }
+ 
+                     animate(); 
+     </script>
 
 </body>
 
