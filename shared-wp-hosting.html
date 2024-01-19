@@ -3,15 +3,28 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/shared_styles.css">
     <script src="https://kit.fontawesome.com/a2b47f8e99.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
-    <link rel="stylesheet" href="./Styles/contact_styles.css">
-    <title>Contact Admin | CheckWithDeveloper </title>
+    <title>
+        CheckWithDeveloper
+    </title>
 </head>
 
 <body>
 
+    <!-- <div class="header">
+        <div class="navbar" style="background-color: cadetblue;">
+            <div class="logo">
+                <a class="cwd_logo" href="#home"><img src="./Images/cwdLogo.png" alt="logo_CWD"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#news">Services</a></li>
+                <li><a href="#contact">About</a></li>
+                <li><a href="#about">Contact</a></li>
+                <li><a href="#about">Updates</a></li>
+            </ul>
+        </div>
+    </div> -->
     <div class="header">
         <div class="navbar" style="background-color: cadetblue;">
             <div class="logo">
@@ -78,60 +91,85 @@
     </div>
 
 
-    <div class="contact-container">
-        <div class="contact-inner-container">
-      
-          <div class="contact-info-container">
-            <h1 class="contact-heading">Welcome Team!</h1>
-            <p class="contact-description">
-              Please reach out to us for all your IT needs, you will surely find absolute solutions.!!
-            </p>
-            <div class="line"></div>
-      
-            <div class="contact-details">
-              <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
-              <p>Sakinaka, Mumbai-400072</p>
+    <div class="middle-container">
+        <div class="content_box">
+            <div class="content_box_header">
+                <h1>SharedHosting</h1>
+                <h1>SharedHosting</h1>
             </div>
-            <hr />
-      
-            <div class="contact-details">
-              <h3><i class="fa fa-envelope"></i> Email</h3>
-              <p>admin@checkwithdeveloper.com</p>
-            </div>
-            <hr />
-      
-            <div class="contact-details">
-              <h3><i class="fa fa-phone"></i> Lets Talk</h3>
-              <p>+91 9920162689</p>
-            </div>
-            <hr />
-          </div>
-      
-          <div class="contact-form">
-            <form class="form" action="process_form.php" method="post" onsubmit="return validateForm()">
-              <div class="form-group">
-                <input type="text" name="name" id="name" class="input-field form-input" placeholder="Name" >
-              </div>
-              <div class="form-group">
-                <input type="text" name="email_address" id="email_address" class="input-field form-input" placeholder="Email" >
-                <span id="email-error" class="error"></span>
-              </div>
-              <div class="form-group">
-                  <input type="text" name="phone_no" id="phone_no" class="input-field form-input" placeholder="phone" >
-                  <span id="phone-error" class="error"></span>
-              </div>
-              <div class="form-group">
-                <textarea name="message" id="message" rows="5" class="input-field form-input" placeholder="Message"></textarea>
-                <span id="message-error" class="error"></span>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="input-field submit-btn" value="Submit" >
-              </div>
-            </form>
-          </div>
-      
         </div>
-      </div>
+        <div class="image1">
+            <img src="./Images/shared.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="What-SharedHosting">
+        <div class="What-SharedHosting-Header">
+            <h1>What is Shared Hosting</h1>
+        </div>
+        <div class="What-SharedHosting-Answer">
+            <p>Shared hosting is a type of web hosting where a single physical server hosts multiple sites. Many users utilize the resources on a single server, which keeps the costs low. Users each get a section of a server in which they can host their website files.</p>
+        </div>     
+    </div>
+
+    <div class="feature-container">
+        <div class="feature1">
+            <h1><i class="fa-brands fa-cpanel"></i> Easy Control Panel</h1>
+            <p>Friendly to use cPanel and Plesk Panel</p>
+        </div>
+        <div class="feature2">
+            <h1><i class="fa-solid fa-shuffle"></i> Quick Free Migration</h1>
+            <p>Rest hustle free, we will migrate your services </p>
+        </div>
+        <div class="feature3">
+            <h1><i class="fa-solid fa-money-bill"></i> Pocket Friendly</h1>
+            <p>Pay what it should cost </p>
+        </div>
+    </div>
+
+    <div class="products_container">
+        <div class="products_banner">
+            <h1>Super Web Hosting Deals.. </h1>
+        </div>
+        <div class="products">
+            <div class="product1">
+                <h1><i class="fa-solid fa-server"></i> Basic Plan</h1>
+                <ol>
+                    <li>Upto 5GB Storage</li>
+                    <li>1 website</li>
+                    <li>Fast SSD server</li>
+                    <li>unmetered Bandwidth</li>
+                    <li>Managed Support</li>
+                    <li>Free Deployment</li>
+                </ol>
+                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 125/month</h2>
+            </div>
+            <div class="product1">
+                <h1><i class="fa-solid fa-server"></i>Advance Plan</h1>
+                <ol>
+                    <li>20GB SSD storage</li>
+                    <li>10 Website</li>
+                    <li>Unmetered Bandwidth</li>
+                    <li>Fast SSD server</li>
+                    <li>Managed Support</li>
+                    <li>Free Deployment</li>
+                </ol>
+                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 340/month</h2>
+            </div>
+            <div class="product1">
+                <h1><i class="fa-solid fa-server"></i> Pro Plan</h1>
+                <ol>
+                    <li>100GB SSD storage</li>
+                    <li>Unlimited Website</li>
+                    <li>Unmetered Bandwidth</li>
+                    <li>Fast SSD server</li>
+                    <li>Managed Support</li>
+                    <li>Free Deployment</li>
+                </ol>
+                <h2><i class="fa-solid fa-indian-rupee-sign"></i> 450/month</h2>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
         <div class="footer-content">
