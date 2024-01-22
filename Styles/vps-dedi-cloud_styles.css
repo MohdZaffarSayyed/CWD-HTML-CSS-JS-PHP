@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 /* Default body */
 
 * {
@@ -181,25 +182,25 @@ a {
 
 .image1 img {
     width: 100%;
-
 }
 
 .content_box {
     width: 50%;
     box-sizing: border-box;
-    padding: 100px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}  
+}
 
 .waviy {
     position: relative;
-  }
-  .waviy span {
+}
+
+.waviy span {
     position: relative;
     display: inline-block;
     font-size: 100px;
@@ -207,12 +208,14 @@ a {
     text-transform: uppercase;
     animation: flip 2s infinite;
     animation-delay: calc(.2s * var(--i))
-  }
-  @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
+}
+
+@keyframes flip {
+    0%,
+    80% {
+        transform: rotateY(360deg)
     }
-  }
+}
 
 .content_box {
     background-color: #ece0e0;
@@ -235,32 +238,31 @@ a {
     }
 }
 
-
-@media screen and (max-width: 450px){
-    .waviy span{
-        font-size: 50px;
+@media screen and (max-width: 450px) {
+    .waviy span {
+        font-size: 20px;
     }
 }
 
-
-.What-SSL{
+.What-SSL {
     padding: 20px;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(23, 23, 44);
 }
 
-.Secure-Sockets-Layer{
+.Secure-Sockets-Layer {
     padding: 10px;
     text-align: center;
-    font-size: larger;  
+    font-size: larger;
 }
 
-.What-SSL-Answer{
+.What-SSL-Answer {
     text-align: center;
     padding: 10px;
     font-size: 20px;
 }
+
 
 /*Products_Container*/
 
@@ -390,7 +392,6 @@ a {
         width: 100%;
         align-items: center;
     }
-    
 }
 
 
@@ -497,5 +498,3 @@ a {
     color: white;
     /* Color change on hover */
 }
-
-
