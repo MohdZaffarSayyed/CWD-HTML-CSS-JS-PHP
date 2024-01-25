@@ -18,7 +18,7 @@
     background-color: cadetblue;
     padding: 10px;
     /* Added padding for better appearance */
-    border-radius: 3px;
+    border-radius: 0px 0px 3px 3px;
 }
 
 .logo img {

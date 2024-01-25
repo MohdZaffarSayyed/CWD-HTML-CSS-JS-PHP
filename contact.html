@@ -110,10 +110,10 @@
           <div class="contact-form">
             <form class="form" action="process_form.php" method="post" onsubmit="return validateForm()">
               <div class="form-group">
-                <input type="text" name="name" id="name" class="input-field form-input" placeholder="Name" >
+                <input type="text" name="name" id="name" class="input-field form-input" placeholder="Name" required>
               </div>
               <div class="form-group">
-                <input type="text" name="email_address" id="email_address" class="input-field form-input" placeholder="Email" >
+                <input type="text" name="email_address" id="email_address" class="input-field form-input" placeholder="Email">
                 <span id="email-error" class="error"></span>
               </div>
               <div class="form-group">
@@ -121,7 +121,7 @@
                   <span id="phone-error" class="error"></span>
               </div>
               <div class="form-group">
-                <textarea name="message" id="message" rows="5" class="input-field form-input" placeholder="Message"></textarea>
+                <textarea name="message" id="message" rows="5" class="input-field form-input" placeholder="Message" required></textarea>
                 <span id="message-error" class="error"></span>
               </div>
               <div class="form-group">
@@ -131,7 +131,7 @@
           </div>
       
         </div>
-      </div>
+    </div>
 
     <div class="footer">
         <div class="footer-content">
@@ -194,7 +194,64 @@
         </div>
 
     </div>
+    <script>
 
+        // Function to get the value of a URL parameter by name
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Get the greeting parameter value from the URL
+        var serviceValue = getParameterByName('service');
+
+        // Set the greeting value as the default value for the textarea
+        if (serviceValue) {
+            var message="Hey, I want to know more about "+ serviceValue;
+            document.getElementById('message').value = message;
+        }
+        function validateForm() {
+            const emailInput = document.getElementById("email_address");
+            const emailError = document.getElementById("email-error");
+            const email = emailInput.value;
+    
+            const phoneInput = document.getElementById("phone_no");
+            const phoneError = document.getElementById("phone-error");
+            const phone = phoneInput.value;
+    
+            // Regular expression patterns
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            const phonePattern = /^\d{10}$/; // Assumes a 10-digit phone number
+    
+            let isValid = true;
+    
+            // Email validation
+            if (!emailPattern.test(email)) {
+                emailError.textContent = "Invalid email address";
+                emailInput.focus();
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+    
+            // Phone number validation
+            if (!phonePattern.test(phone)) {
+                phoneError.textContent = "Invalid phone number";
+                phoneInput.focus();
+                isValid = false;
+            } else {
+                phoneError.textContent = "";
+            }
+    
+            return isValid;
+        }
+    
+    </script>
 </body>
 
 </html>
